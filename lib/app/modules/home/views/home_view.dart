@@ -1,3 +1,4 @@
+import 'package:angels_share/palette.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -11,40 +12,22 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Get.isDarkMode
-            ? Text(
-                'dark',
-                style: TextStyle(color: Colors.blue),
-              )
-            : Text(
-                'light',
-                style: TextStyle(color: Colors.black),
-              ),
-        centerTitle: true,
-        backgroundColor: Get.isDarkMode ? Colors.black12 : Colors.white,
+        title: Text('title'),
+        centerTitle: false,
         elevation: 0,
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(SettingView());
+              Get.toNamed('/setting');
             },
             icon: Icon(
-              Icons.settings,
+              Icons.menu,
               color: Colors.black,
             ),
           ),
         ],
       ),
-      body: Center(
-        child: OutlinedButton(
-          onPressed: () {
-            Get.changeTheme(
-              Get.isDarkMode ? ThemeData.light() : ThemeData.dark(),
-            );
-          },
-          child: const Text('Change Theme'),
-        ),
-      ),
+      body: Center(),
     );
   }
 }
