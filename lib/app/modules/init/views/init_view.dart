@@ -10,13 +10,17 @@ class InitView extends GetView<InitController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('InitView'),
-          centerTitle: true,
-        ), body: Center(child: FloatingActionButton(
-      onPressed: () {
-        Get.offAll(HomeView());
-      },
-    )), a);
+      appBar: AppBar(
+        title: const Text('InitView'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: FloatingActionButton(
+          onPressed: () {
+            Get.offAll(HomeView());
+          },
+        ),
+      ),
+    );
   }
 }
