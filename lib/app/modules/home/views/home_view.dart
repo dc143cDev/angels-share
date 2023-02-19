@@ -1,3 +1,4 @@
+import 'package:angels_share/app/modules/home/views/home_fab.dart';
 import 'package:angels_share/palette.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: HomeFAB(),
       appBar: AppBar(
         title: Text('title'),
         centerTitle: false,
