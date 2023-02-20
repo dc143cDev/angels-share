@@ -48,7 +48,7 @@ class HomeFAB extends StatelessWidget {
             child: Icon(
               Icons.book,
             ),
-            label: 'Add note book',
+            label: 'Add note bookf',
             onTap: () {}),
       ],
     );
