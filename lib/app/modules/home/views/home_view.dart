@@ -11,10 +11,15 @@ class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.put(HomeController());
+
     return Scaffold(
       floatingActionButton: HomeFAB(),
       appBar: AppBar(
-        title: Text('title'),
+        title: Text(
+          'Notender',
+          style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
+        ),
         centerTitle: false,
         elevation: 0,
         actions: [
@@ -29,7 +34,14 @@ class HomeView extends GetView<HomeController> {
           ),
         ],
       ),
-      body: Center(),
+      body: Center(
+        child: Obx(
+          () => Text(
+            '${controller.homePageText}',
+            style: TextStyle(fontSize: 18),
+          ),
+        ),
+      ),
     );
   }
 }

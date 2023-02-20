@@ -40,13 +40,15 @@ class HomeFAB extends StatelessWidget {
             child: Icon(
               Icons.edit,
             ),
-            label: 'add note',
-            onTap: () {}),
+            label: 'Create tasting note',
+            onTap: () {
+              Get.toNamed('/add-tasting-note');
+            }),
         SpeedDialChild(
             child: Icon(
               Icons.book,
             ),
-            label: 'add book',
+            label: 'Add note book',
             onTap: () {}),
       ],
     );
