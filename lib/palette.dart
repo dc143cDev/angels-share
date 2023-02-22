@@ -11,3 +11,10 @@ const textBlack = Color(0xffffffff);
 //포인트 컬러
 const cascadeHopGreen = Color(0xffc0ff02);
 const sherryRed = Color(0xffdc143c);
+
+class MainTextStyle {
+  static const TextStyle textStyle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+  );
+}

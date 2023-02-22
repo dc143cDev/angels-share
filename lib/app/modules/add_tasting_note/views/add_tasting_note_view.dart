@@ -1,3 +1,4 @@
+import 'package:angels_share/palette.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -20,28 +21,35 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
             ),
             Row(
               children: [
-                TextButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  child: Text(
-                    'Cancel',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: Text(
+                      'Cancel',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 278,
+                Expanded(
+                  flex: 6,
+                  child: SizedBox(),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Done',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+                Expanded(
+                  flex: 2,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Done',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                 )
@@ -52,10 +60,7 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
               child: TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Title',
-                  hintStyle: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  hintStyle: MainTextStyle.textStyle,
                 ),
                 autofocus: true,
               ),

@@ -13,12 +13,13 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     Get.put(HomeController());
 
+    //파이어
     return Scaffold(
       floatingActionButton: HomeFAB(),
       appBar: AppBar(
         title: Text(
           'Notender',
-          style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
+          style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
         ),
         centerTitle: false,
         elevation: 0,

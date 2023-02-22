@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 
+import '../../../../custom_icons.dart';
+
 class HomeFAB extends StatelessWidget {
   const HomeFAB({Key? key}) : super(key: key);
 
@@ -32,24 +34,25 @@ class HomeFAB extends StatelessWidget {
           ),
         ),
       ),
-
       //dial item 들.
       //클릭시 해당 함수에 해당하는 디알로그 출력.
       children: [
         SpeedDialChild(
             child: Icon(
-              Icons.edit,
+              Custom.wine_glass_alt,
             ),
-            label: 'Create tasting note',
+            label: 'Whiskey',
             onTap: () {
               Get.toNamed('/add-tasting-note');
             }),
         SpeedDialChild(
             child: Icon(
-              Icons.book,
+              Custom.beer,
             ),
-            label: 'Add note book',
-            onTap: () {}),
+            label: 'Craft Beer',
+            onTap: () {
+              Get.toNamed('/add-tasting-note');
+            }),
       ],
     );
   }

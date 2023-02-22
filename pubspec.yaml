@@ -13,6 +13,7 @@ dependencies:
   onboarding: ^3.1.0
   google_fonts: ^4.0.3
   flutter_speed_dial: ^6.2.0
+  icloud_storage: ^2.2.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -21,4 +22,8 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
+  fonts:
+    - family: Custom
+      fonts:
+        - asset: fonts/Custom.ttf
 

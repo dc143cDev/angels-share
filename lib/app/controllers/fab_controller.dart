@@ -6,7 +6,7 @@ class FabController extends GetxController
     with GetSingleTickerProviderStateMixin {
   //애니메이션 컨트롤러 init.
   late AnimationController animationController =
-      AnimationController(vsync: this, duration: Duration(seconds: 1));
+      AnimationController(vsync: this, duration: Duration(milliseconds: 500));
 
   //speed dial 버튼 클릭시 감지 노티파이어.
   //애니메이션과 무관. 다이알 올라오는 기능 감지용.
