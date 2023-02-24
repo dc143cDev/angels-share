@@ -13,7 +13,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     Get.put(HomeController());
 
-    //파이어
+    //모든 데이터는 로컬 데이터로 저장해뒀다가 동기화시 각 클라우드 api 로 넘김.
     return Scaffold(
       floatingActionButton: HomeFAB(),
       appBar: AppBar(
