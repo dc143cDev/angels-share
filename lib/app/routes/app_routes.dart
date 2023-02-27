@@ -7,6 +7,7 @@ abstract class Routes {
   static const SETTING = _Paths.SETTING;
   static const INIT = _Paths.INIT;
   static const ADD_TASTING_NOTE = _Paths.ADD_TASTING_NOTE;
+  static const NOTE = _Paths.NOTE;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const SETTING = '/setting';
   static const INIT = '/init';
   static const ADD_TASTING_NOTE = '/add-tasting-note';
+  static const NOTE = '/note';
 }
