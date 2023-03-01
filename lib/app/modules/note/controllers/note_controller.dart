@@ -1,12 +1,13 @@
 import 'package:angels_share/app/data/note_db.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 import '../../../models/note.dart';
 
 class NoteController extends GetxController {
   var homePageText = 'please add item'.obs;
 
-  late List<Note> notes;
+  late List<Note> notes = [];
 
   late Note note;
 

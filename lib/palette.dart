@@ -10,6 +10,8 @@ const textBlack = Color(0xffffffff);
 
 //포인트 컬러
 const cascadeHopGreen = Color(0xffc0ff02);
+const hopGreen = Color(0xffcfdd7b);
+const forestGreen = Color(0xff034b03);
 const sherryRed = Color(0xffdc143c);
 
 class MainTextStyle {

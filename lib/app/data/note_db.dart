@@ -28,7 +28,7 @@ class NoteDB {
 
   Future _createDB(Database db, int version) async {
     //id 테이블 타입. 프라이머리 키. 자동 생성.
-    final idType = 'INTEGER PRIMARY KET AUTOINCREMENT';
+    final idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
     final textType = 'TEXT NOT NULL';
     final boolType = 'BOOLEAN NOT NULL';
     final integerType = 'INTEGER NOT NULL';

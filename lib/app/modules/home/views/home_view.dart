@@ -1,4 +1,4 @@
-import 'package:angels_share/app/modules/home/views/home_fab.dart';
+import 'package:angels_share/app/modules/note/views/note_fab.dart';
 import 'package:angels_share/palette.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class HomeView extends GetView<HomeController> {
 
     //모든 데이터는 로컬 데이터로 저장해뒀다가 동기화시 각 클라우드 api 로 넘김.
     return Scaffold(
-      floatingActionButton: HomeFAB(),
+      floatingActionButton: NoteFAB(),
       appBar: AppBar(
         title: Text(
           'Notender',

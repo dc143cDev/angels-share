@@ -1,9 +1,10 @@
+import 'package:angels_share/app/models/note_card_widget_view.dart';
 import 'package:angels_share/app/modules/note/views/note_detail_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../../home/views/home_fab.dart';
+import 'note_fab.dart';
 import '../controllers/note_controller.dart';
 
 class NoteView extends GetView<NoteController> {
@@ -11,7 +12,7 @@ class NoteView extends GetView<NoteController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: HomeFAB(),
+      floatingActionButton: NoteFAB(),
       appBar: AppBar(
         title: Text(
           'Notender',
@@ -32,12 +33,11 @@ class NoteView extends GetView<NoteController> {
         ],
       ),
       body: Center(
-        child: Obx(
-          () => Text(
-            '${controller.homePageText}',
-            style: TextStyle(fontSize: 18),
-          ),
-        ),
+        child: controller.isLoading.value
+            ? CircularProgressIndicator()
+            : controller.notes.isEmpty
+                ? Text('Please add item')
+                : buildNotes(),
       ),
     );
   }
@@ -58,7 +58,12 @@ class NoteView extends GetView<NoteController> {
                   ),
                 },
               );
+              controller.refreshNotes();
             },
+            child: NoteCardWidget(
+              note: note,
+              index: index,
+            ),
           );
         },
       );

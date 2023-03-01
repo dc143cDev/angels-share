@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 
 import '../../../../custom_icons.dart';
 
-class HomeFAB extends StatelessWidget {
-  const HomeFAB({Key? key}) : super(key: key);
+class NoteFAB extends StatelessWidget {
+  const NoteFAB({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
