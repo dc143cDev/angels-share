@@ -5,9 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/note_controller.dart';
 
 class NoteDetailView extends GetView<NoteController> {
-  final int noteId;
   const NoteDetailView({
-    required this.noteId,
     Key? key,
   }) : super(key: key);
   @override
@@ -15,7 +13,7 @@ class NoteDetailView extends GetView<NoteController> {
     Get.put(NoteController());
     return Scaffold(
       appBar: AppBar(
-        title: const Text('NoteEditView'),
+        title: const Text('NoteDetail'),
         centerTitle: true,
       ),
       body: controller.isLoading.value
@@ -28,7 +26,8 @@ class NoteDetailView extends GetView<NoteController> {
                 padding: EdgeInsets.symmetric(vertical: 8),
                 children: [
                   Text(
-                    controller.note.title,
+                    '${Get.arguments['title']}',
+                    // controller.note.title,
                     style: TextStyle(
                       fontSize: 22,
                     ),

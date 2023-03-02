@@ -43,7 +43,9 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
                 Expanded(
                   flex: 2,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      controller.addNote();
+                    },
                     child: Text(
                       'Done',
                       style: TextStyle(
@@ -58,6 +60,7 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
+                controller: controller.TitleController,
                 decoration: InputDecoration(
                   hintText: 'Title',
                   hintStyle: MainTextStyle.textStyle,

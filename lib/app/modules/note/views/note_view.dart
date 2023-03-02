@@ -45,25 +45,13 @@ class NoteView extends GetView<NoteController> {
   Widget buildNotes() => GridView.builder(
         gridDelegate:
             SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+        itemCount: controller.notes.length,
         itemBuilder: (context, index) {
           final note = controller.notes[index];
 
-          return GestureDetector(
-            onTap: () async {
-              await Get.toNamed(
-                '',
-                arguments: {
-                  GetBuilder(
-                    builder: (context) => NoteDetailView(noteId: note.id!),
-                  ),
-                },
-              );
-              controller.refreshNotes();
-            },
-            child: NoteCardWidget(
-              note: note,
-              index: index,
-            ),
+          return NoteCardWidget(
+            note: note,
+            index: index,
           );
         },
       );

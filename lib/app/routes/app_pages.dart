@@ -7,6 +7,7 @@ import '../modules/home/views/home_view.dart';
 import '../modules/init/bindings/init_binding.dart';
 import '../modules/init/views/init_view.dart';
 import '../modules/note/bindings/note_binding.dart';
+import '../modules/note/views/note_detail_view.dart';
 import '../modules/note/views/note_view.dart';
 import '../modules/setting/bindings/setting_binding.dart';
 import '../modules/setting/views/setting_view.dart';
@@ -44,6 +45,11 @@ class AppPages {
     GetPage(
       name: _Paths.NOTE,
       page: () => const NoteView(),
+      binding: NoteBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTE_DETAIL,
+      page: () => const NoteDetailView(),
       binding: NoteBinding(),
     ),
   ];

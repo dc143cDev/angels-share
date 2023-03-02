@@ -33,15 +33,9 @@ class NoteDB {
     final boolType = 'BOOLEAN NOT NULL';
     final integerType = 'INTEGER NOT NULL';
 
-    await db.execute('''
-    CREATE TABLE $tableNotes (
-    ${NoteFields.id} $idType,
-    ${NoteFields.isBeer} $boolType,
-    ${NoteFields.title} $textType,
-    ${NoteFields.content} $textType,
-    ${NoteFields.noteColor} $textType,
-    )
-    ''');
+    await db.execute('CREATE TABLE $tableNotes('
+        '_id INTEGER PRIMARY KEY AUTOINCREMENT, isBeer BOOLEAN, title TEXT NOT NULL, content TEXT, noteColor TEXT'
+        ')');
   }
 
   //CRUD.

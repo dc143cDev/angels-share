@@ -1,9 +1,24 @@
+import 'package:angels_share/app/data/note_db.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class AddTastingNoteController extends GetxController {
-  //TODO: Implement AddTastingNoteController
+import '../../../models/note.dart';
 
-  final count = 0.obs;
+class AddTastingNoteController extends GetxController {
+  TextEditingController TitleController = TextEditingController();
+  TextEditingController ContentController = TextEditingController();
+  TextEditingController NoteColorController = TextEditingController();
+
+  Future addNote() async {
+    final note = Note(
+      isBeer: false,
+      title: TitleController.text,
+      content: ContentController.text,
+      noteColor: NoteColorController.text,
+    );
+    await NoteDB.instance.create(note);
+  }
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +33,4 @@ class AddTastingNoteController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
