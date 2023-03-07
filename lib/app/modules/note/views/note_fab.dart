@@ -43,7 +43,10 @@ class NoteFAB extends StatelessWidget {
             ),
             label: 'Whiskey',
             onTap: () {
-              Get.toNamed('/add-tasting-note');
+              Get.toNamed(
+                '/add-tasting-note',
+                arguments: {'genre': 'whiskey'},
+              );
             }),
         SpeedDialChild(
             child: Icon(
@@ -51,7 +54,10 @@ class NoteFAB extends StatelessWidget {
             ),
             label: 'Craft Beer',
             onTap: () {
-              Get.toNamed('/add-tasting-note');
+              Get.toNamed(
+                '/add-tasting-note',
+                arguments: {'genre': 'craft_beer'},
+              );
             }),
       ],
     );

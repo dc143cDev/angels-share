@@ -68,6 +68,10 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
                 autofocus: true,
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: Text('${Get.arguments['genre']}'),
+            ),
           ],
         ),
       ),
