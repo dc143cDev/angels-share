@@ -1,4 +1,3 @@
-import 'package:angels_share/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,9 +15,7 @@ class InitView extends GetView<InitController> {
       ),
       body: Center(
         child: FloatingActionButton(
-          onPressed: () {
-            Get.offAll(HomeView());
-          },
+          onPressed: () {},
         ),
       ),
     );

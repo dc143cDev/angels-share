@@ -1,9 +1,11 @@
+import 'package:angels_share/app/modules/add_tasting_note/views/whiskey_view.dart';
 import 'package:angels_share/palette.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
 import '../controllers/add_tasting_note_controller.dart';
+import 'craft_beer_view.dart';
 
 class AddTastingNoteView extends GetView<AddTastingNoteController> {
   const AddTastingNoteView({Key? key}) : super(key: key);
@@ -70,7 +72,10 @@ class AddTastingNoteView extends GetView<AddTastingNoteController> {
             ),
             Padding(
               padding: EdgeInsets.all(8),
-              child: Text('${Get.arguments['genre']}'),
+              child: Get.arguments['genre'] == 'whiskey'
+                  ? WhiskeyView()
+                  : CraftBeerView(),
+              // child: Text('${Get.arguments['genre']}'),
             ),
           ],
         ),

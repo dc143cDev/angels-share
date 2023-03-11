@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import '../../../models/note.dart';
 
 class NoteController extends GetxController {
-  var homePageText = 'please add item'.obs;
-
   late List<Note> notes = [];
 
   late Note note;
@@ -17,12 +15,15 @@ class NoteController extends GetxController {
   void onInit() {
     super.onInit();
 
+    NoteDB.instance.readAllNotes();
     refreshNotes();
+    print('isInit');
   }
 
   @override
   void onReady() {
     super.onReady();
+    print('isReady');
   }
 
   @override

@@ -36,7 +36,7 @@ class NoteView extends GetView<NoteController> {
         child: controller.isLoading.value
             ? CircularProgressIndicator()
             : controller.notes.isEmpty
-                ? Text('Please add item')
+                ? Text('pls add item')
                 : buildNotes(),
       ),
     );

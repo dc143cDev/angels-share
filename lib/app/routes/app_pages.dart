@@ -2,8 +2,6 @@ import 'package:get/get.dart';
 
 import '../modules/add_tasting_note/bindings/add_tasting_note_binding.dart';
 import '../modules/add_tasting_note/views/add_tasting_note_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
 import '../modules/init/bindings/init_binding.dart';
 import '../modules/init/views/init_view.dart';
 import '../modules/note/bindings/note_binding.dart';
@@ -20,11 +18,6 @@ class AppPages {
   static const INITIAL = Routes.NOTE;
 
   static final routes = [
-    GetPage(
-      name: _Paths.HOME,
-      page: () => const HomeView(),
-      binding: HomeBinding(),
-    ),
     GetPage(
       name: _Paths.SETTING,
       page: () => const SettingView(),
